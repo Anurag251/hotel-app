@@ -8,9 +8,11 @@ const CustomTitleComponent = ({ title, url }) => {
         Explore <span>{title}</span>
       </h4>
 
-      <Link to={url} className="nav-btn">
-        <button>Show All</button>
-      </Link>
+      {url ? (
+        <Link to={url} className="nav-btn">
+          <button>Show All</button>
+        </Link>
+      ) : null}
     </div>
   );
 };

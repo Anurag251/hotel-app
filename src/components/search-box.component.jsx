@@ -1,7 +1,9 @@
 import React from "react";
-import { IconFilter, IconSearch } from "./icon.component";
+import { useLocation } from "react-router-dom";
+import { IconSearch } from "./icon.component";
 
 const SearchBoxComponent = () => {
+  const location = useLocation();
   return (
     <div className="search-box">
       <div className="profile-info">
@@ -18,16 +20,18 @@ const SearchBoxComponent = () => {
             <IconSearch />
           </div>
 
-          <div className="filter-btn">
-            <IconFilter />
-          </div>
+          {/* <div className="filter-btn">
+          <IconFilter />
+        </div> */}
 
-          <input
-            className="custom-input"
-            id="forSearch"
-            type="text"
-            placeholder="Search food"
-          />
+          {location.pathname === "/search" ? (
+            <input
+              className="custom-input"
+              id="forSearch"
+              type="text"
+              placeholder="Search food"
+            />
+          ) : null}
         </div>
       </div>
     </div>

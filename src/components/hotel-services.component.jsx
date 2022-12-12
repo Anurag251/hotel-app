@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import CustomTitleComponent from "./custom-title.component";
 import {
   IconBar,
@@ -18,75 +19,91 @@ const HotelServicesComponent = () => {
 
       <div className="service-btn-list">
         <div className="item">
-          <button>
-            <div className="icon">
-              <IconHotel />
-            </div>
-            <div className="name">Hotel</div>
-          </button>
+          <Link to="/hotel">
+            <button>
+              <div className="icon">
+                <IconHotel />
+              </div>
+              <div className="name">Hotel</div>
+            </button>
+          </Link>
         </div>
 
         <div className="item">
-          <button>
-            <div className="icon">
-              <IconRestaurant />
-            </div>
-            <div className="name">Restaurant</div>
-          </button>
+          <Link to="/restaurant">
+            <button>
+              <div className="icon">
+                <IconRestaurant />
+              </div>
+              <div className="name">Restaurant</div>
+            </button>
+          </Link>
         </div>
 
         <div className="item">
-          <button>
-            <div className="icon">
-              <IconCab />
-            </div>
-            <div className="name">Cab</div>
-          </button>
+          <Link to="/cab">
+            <button>
+              <div className="icon">
+                <IconCab />
+              </div>
+              <div className="name">Cab</div>
+            </button>
+          </Link>
         </div>
 
         <div className="item">
-          <button>
-            <div className="icon">
-              <IconTrekking />
-            </div>
-            <div className="name">Trekking</div>
-          </button>
+          <Link to="/trekking">
+            <button>
+              <div className="icon">
+                <IconTrekking />
+              </div>
+              <div className="name">Trekking</div>
+            </button>
+          </Link>
         </div>
 
         <div className="item">
-          <button>
-            <div className="icon">
-              <IconSPA />
-            </div>
-            <div className="name">SPA</div>
-          </button>
+          <Link to="/spa">
+            <button>
+              <div className="icon">
+                <IconSPA />
+              </div>
+              <div className="name">SPA</div>
+            </button>
+          </Link>
         </div>
 
         <div className="item">
-          <button>
-            <div className="icon">
-              <IconParking />
-            </div>
-            <div className="name">Parking</div>
-          </button>
+          <Link to="/parking">
+            <button>
+              <div className="icon">
+                <IconParking />
+              </div>
+              <div className="name">Parking</div>
+            </button>
+          </Link>
         </div>
 
         <div className="item">
-          <button>
-            <div className="icon">
-              <IconBar />
-            </div>
-            <div className="name">Bar</div>
-          </button>
+          <Link to="/bar">
+            <button>
+              <div className="icon">
+                <IconBar />
+              </div>
+              <div className="name">Bar</div>
+            </button>
+          </Link>
         </div>
 
         <div className="item">
-          <button>
-            <div className="icon">
-              <IconMusic />
-            </div>
-            <div className="name">Music</div>
-          </button>
+          <Link to="/music">
+            <button>
+              <div className="icon">
+                <IconMusic />
+              </div>
+              <div className="name">Music</div>
+            </button>
+          </Link>
         </div>
       </div>
     </div>

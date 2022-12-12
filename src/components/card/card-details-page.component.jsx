@@ -1,11 +1,10 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import CustomTitleComponent from "../custom-title.component";
 import { IconHeart, IconMapMarker } from "../icon.component";
 
 const CardDetailsPageComponent = () => {
   const { state } = useLocation();
-  console.log(state);
+
   return (
     <div className="card-details-page">
       <div className="image">

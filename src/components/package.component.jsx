@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import CustomTitleComponent from "./custom-title.component";
 import { IconMapMarker } from "./icon.component";
 
@@ -33,22 +33,23 @@ const PackageComponent = ({ datas }) => {
         >
           {datas.map((data, idx) => (
             <SwiperSlide key={idx}>
-              <div className="item">
+              <div
+                className="item"
+                onClick={() => {
+                  navigate(`/quick-view/${data.id}`, {
+                    state: {
+                      package: "/package",
+                      datas: datas,
+                      data: data,
+                    },
+                  });
+                }}
+              >
                 <div className="image">
                   <img src={data.image} alt="" />
                 </div>
 
-                <div
-                  onClick={() => {
-                    navigate(`/quick-view/${data.id}`, {
-                      state: {
-                        package: "/package",
-                        datas: datas,
-                        data: data,
-                      },
-                    });
-                  }}
-                >
+                <div>
                   <div className="details">
                     <h4 className="name">{data.name}</h4>
 

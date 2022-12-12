@@ -1,15 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { IconMapMarker } from "../icon.component";
 
 const CardComponent = ({ data }) => {
+  const navigate = useNavigate();
+
   return (
     <div className="card">
       <div className="image">
         <img src={data.image} alt="" />
       </div>
 
-      <Link to="/quick-view">
+      <div
+        onClick={() => {
+          navigate(`/details-page/${data.id}`, {
+            state: {
+              data: data,
+            },
+          });
+        }}
+      >
         <div className="details">
           <h4 className="name">{data.name}</h4>
 
@@ -22,7 +32,7 @@ const CardComponent = ({ data }) => {
             <div className="price">Rs {data.price}</div>
           </div>
         </div>
-      </Link>
+      </div>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 
 import "./assets/styles/styles.sass";
@@ -8,17 +8,37 @@ import CardDetailsPageComponent from "./components/card/card-details-page.compon
 import HeaderComponent from "./components/header.component";
 import MobileNavigationComponent from "./components/mobile-navigation.component";
 import { ALL_DATA } from "./data/data";
+import BarPageComponent from "./pages/bar-page.component";
+import CabPageComponent from "./pages/cab-page.component";
 import CartPageComponent from "./pages/cart-page.component";
 import HomePageComponent from "./pages/home-page.component";
+import HotelPageComponent from "./pages/hotel-page.component";
+import MusicPageComponent from "./pages/music-page.component";
 import PackagePageComponant from "./pages/package-page.componant";
+import ParkingPageComponent from "./pages/parking-page.component";
 import QuickViewPageComponent from "./pages/quick-view-page.component";
+import RestaurantPageComponent from "./pages/restaurant-page.component";
 import SearchPageComponent from "./pages/search-page.component";
+import SpaPageComponent from "./pages/spa-page.component";
+import TrekkingPageComponent from "./pages/trekking-page.component";
 
 const App = () => {
   const location = useLocation();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   return (
-    <div className="App">
+    <div
+      className={`App ${
+        location.pathname === "/" ||
+        location.pathname === "/search" ||
+        location.pathname === "/cart"
+          ? "padding"
+          : ""
+      }`}
+    >
       {location.pathname === "/" ||
       location.pathname === "/search" ||
       location.pathname === "/cart" ? (
@@ -42,6 +62,54 @@ const App = () => {
           exact
           path="/package"
           element={<PackagePageComponant datas={ALL_DATA} />}
+        />
+
+        <Route
+          exact
+          path="/hotel"
+          element={<HotelPageComponent datas={ALL_DATA} />}
+        />
+
+        <Route
+          exact
+          path="/restaurant"
+          element={<RestaurantPageComponent datas={ALL_DATA} />}
+        />
+
+        <Route
+          exact
+          path="/cab"
+          element={<CabPageComponent datas={ALL_DATA} />}
+        />
+
+        <Route
+          exact
+          path="/trekking"
+          element={<TrekkingPageComponent datas={ALL_DATA} />}
+        />
+
+        <Route
+          exact
+          path="/spa"
+          element={<SpaPageComponent datas={ALL_DATA} />}
+        />
+
+        <Route
+          exact
+          path="/parking"
+          element={<ParkingPageComponent datas={ALL_DATA} />}
+        />
+
+        <Route
+          exact
+          path="/bar"
+          element={<BarPageComponent datas={ALL_DATA} />}
+        />
+
+        <Route
+          exact
+          path="/music"
+          element={<MusicPageComponent datas={ALL_DATA} />}
         />
 
         <Route

@@ -28,7 +28,8 @@ const BannerComponent = () => {
     <div className="banner-component">
       <Swiper
         slidesPerView={1}
-        spaceBetween={0}
+        spaceBetween={10}
+        effect={"fade"}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import BannerComponent from "../components/banner.component";
 import CustomSectionComponent from "../components/custom-section.component";
 import HotelServicesComponent from "../components/hotel-services.component";
@@ -9,7 +10,9 @@ const HomePageComponent = ({ datas }) => {
   return (
     <div className="home-page">
       <CustomSectionComponent>
-        <SearchBoxComponent />
+        <Link to="/search">
+          <SearchBoxComponent />
+        </Link>
       </CustomSectionComponent>
 
       <CustomSectionComponent>
