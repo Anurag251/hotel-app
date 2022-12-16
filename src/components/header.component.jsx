@@ -21,9 +21,11 @@ const HeaderComponent = () => {
               <IconNotification />
             </div>
 
-            <div className="profile-btn">
-              <img src={pImage} alt="" />
-            </div>
+            <Link to="/profile">
+              <div className="profile-btn">
+                <img src={pImage} alt="" />
+              </div>
+            </Link>
           </div>
         </div>
       </div>

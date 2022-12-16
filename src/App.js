@@ -7,6 +7,7 @@ import BackBtnComponent from "./components/back-btn.component";
 import CardDetailsPageComponent from "./components/card/card-details-page.component";
 import HeaderComponent from "./components/header.component";
 import MobileNavigationComponent from "./components/mobile-navigation.component";
+import UserProfileComponent from "./components/user-profile.component";
 import { ALL_DATA } from "./data/data";
 import BarPageComponent from "./pages/bar-page.component";
 import CabPageComponent from "./pages/cab-page.component";
@@ -16,6 +17,8 @@ import HotelPageComponent from "./pages/hotel-page.component";
 import MusicPageComponent from "./pages/music-page.component";
 import PackagePageComponant from "./pages/package-page.componant";
 import ParkingPageComponent from "./pages/parking-page.component";
+import PersonalDataPageComponent from "./pages/personal-data-page.component";
+import ProfilePageComponent from "./pages/profile-page.component";
 import QuickViewPageComponent from "./pages/quick-view-page.component";
 import RestaurantPageComponent from "./pages/restaurant-page.component";
 import SearchPageComponent from "./pages/search-page.component";
@@ -121,6 +124,14 @@ const App = () => {
         <Route exact path="/cart" element={<CartPageComponent />} />
 
         <Route exact path="/search" element={<SearchPageComponent />} />
+
+        <Route exact path="/profile" element={<ProfilePageComponent />} />
+
+        <Route
+          exact
+          path="/personal-data"
+          element={<PersonalDataPageComponent />}
+        />
       </Routes>
 
       {location.pathname === "/" ||
